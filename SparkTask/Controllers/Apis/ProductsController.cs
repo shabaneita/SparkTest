@@ -11,7 +11,7 @@ using SparkTask.Models;
 
 namespace SparkTask.Controllers.Apis
 {
-    [Authorize]
+  
 
     [Route("api/[controller]")]
     [ApiController]
