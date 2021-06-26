@@ -1,0 +1,44 @@
+﻿@model SparkTask.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+<div class="card border-success mb-3 col-md-6 col-12" style="font-size:larger;">
+    <div style="width:50%;">
+        <img src="~/images/@Model.Image"
+             class="card-img-top m-2"
+             asp-append-version="true" />
+    </div>
+    <div class="card-header bg-transparent border-success">
+        <h3>
+            @Html.DisplayFor(model => model.Name)
+        </h3>
+    </div>
+    
+    <div class="card-body text-black">
+        <h5 class="card-title">
+            Content :
+            @Html.DisplayFor(model => model.Content)
+        </h5>
+    </div>
+
+        <div class="card-body text-black">
+        <h5 class="card-title">
+            products :
+            @Html.DisplayFor(model => model.Products)
+        </h5>
+
+
+
+    </div>
+
+
+    <div class="card-footer bg-transparent border-success">
+        <a asp-action="Index" class="btn btn-sm btn-primary text-uppercase m-2 mr-4 p-3">Index<i class="fa fa-arrow-circle-left fa-2x"></i></a>
+        <a asp-action="Edit" asp-route-id="@Model.CategoryId" class="btn btn-warning m-2 p-3">Edit<i class="fa fa-edit fa-2x"></i></a>
+    </div>
+</div>
